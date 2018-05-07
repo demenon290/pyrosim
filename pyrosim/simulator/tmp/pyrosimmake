@@ -1,0 +1,82 @@
+g++ -std=c++11 -DHAVE_CONFIG_H -I. -Iode-0.12/ode/src -Iode-0.12/include -DdTRIMESH_ENABLED -DdDOUBLE  -g -O2 -MT -MP -MMD -c -o simulator.o simulator.cpp
+g++ -std=c++11 -DHAVE_CONFIG_H -I. -Iode-0.12/ode/src -Iode-0.12/include -DdTRIMESH_ENABLED -DdDOUBLE  -g -O2 -MT -MP -MMD -c -o raySensor.o raySensor.cpp
+In file included from ode-0.12/include/ode/ode.h:40:0,
+                 from raySensor.h:4,
+                 from raySensor.cpp:5:
+ode-0.12/include/ode/misc.h:59:20: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+      FILE *f=stdout);
+                    ^
+In file included from ode-0.12/include/ode/ode.h:40:0,
+                 from simulator.cpp:4:
+ode-0.12/include/ode/misc.h:59:20: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+      FILE *f=stdout);
+                    ^
+g++ -std=c++11 -DHAVE_CONFIG_H -I. -Iode-0.12/ode/src -Iode-0.12/include -DdTRIMESH_ENABLED -DdDOUBLE  -g -O2 -MT -MP -MMD -c -o neuron.o neuron.cpp
+g++ -std=c++11 -DHAVE_CONFIG_H -I. -Iode-0.12/ode/src -Iode-0.12/include -DdTRIMESH_ENABLED -DdDOUBLE  -g -O2 -MT -MP -MMD -c -o environment.o environment.cpp
+In file included from ode-0.12/include/ode/ode.h:40:0,
+                 from environment.h:4,
+                 from environment.cpp:4:
+ode-0.12/include/ode/misc.h:59:20: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+      FILE *f=stdout);
+                    ^
+g++ -std=c++11 -DHAVE_CONFIG_H -I. -Iode-0.12/ode/src -Iode-0.12/include -DdTRIMESH_ENABLED -DdDOUBLE  -g -O2 -MT -MP -MMD -c -o synapse.o synapse.cpp
+g++ -std=c++11 -DHAVE_CONFIG_H -I. -Iode-0.12/ode/src -Iode-0.12/include -DdTRIMESH_ENABLED -DdDOUBLE  -g -O2 -MT -MP -MMD -c -o proprioceptiveSensor.o proprioceptiveSensor.cpp
+In file included from ode-0.12/include/ode/ode.h:40:0,
+                 from proprioceptiveSensor.h:4,
+                 from proprioceptiveSensor.cpp:6:
+ode-0.12/include/ode/misc.h:59:20: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+      FILE *f=stdout);
+                    ^
+g++ -std=c++11 -DHAVE_CONFIG_H -I. -Iode-0.12/ode/src -Iode-0.12/include -DdTRIMESH_ENABLED -DdDOUBLE  -g -O2 -MT -MP -MMD -c -o lightSensor.o lightSensor.cpp
+g++ -std=c++11 -DHAVE_CONFIG_H -I. -Iode-0.12/ode/src -Iode-0.12/include -DdTRIMESH_ENABLED -DdDOUBLE  -g -O2 -MT -MP -MMD -c -o positionSensor.o positionSensor.cpp
+In file included from ode-0.12/include/ode/ode.h:40:0,
+                 from lightSensor.h:4,
+                 from lightSensor.cpp:5:
+ode-0.12/include/ode/misc.h:59:20: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+      FILE *f=stdout);
+                    ^
+g++ -std=c++11 -DHAVE_CONFIG_H -I. -Iode-0.12/ode/src -Iode-0.12/include -DdTRIMESH_ENABLED -DdDOUBLE  -g -O2 -MT -MP -MMD -c -o touchSensor.o touchSensor.cpp
+In file included from ode-0.12/include/ode/ode.h:40:0,
+                 from positionSensor.h:4,
+                 from positionSensor.cpp:5:
+ode-0.12/include/ode/misc.h:59:20: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+      FILE *f=stdout);
+                    ^
+g++ -std=c++11 -DHAVE_CONFIG_H -I. -Iode-0.12/ode/src -Iode-0.12/include -DdTRIMESH_ENABLED -DdDOUBLE  -g -O2 -MT -MP -MMD -c -o vestibularSensor.o vestibularSensor.cpp
+In file included from ode-0.12/include/ode/ode.h:40:0,
+                 from touchSensor.h:4,
+                 from touchSensor.cpp:5:
+ode-0.12/include/ode/misc.h:59:20: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+      FILE *f=stdout);
+                    ^
+g++ -std=c++11 -DHAVE_CONFIG_H -I. -Iode-0.12/ode/src -Iode-0.12/include -DdTRIMESH_ENABLED -DdDOUBLE  -g -O2 -MT -MP -MMD -c -o neuralNetwork.o neuralNetwork.cpp
+In file included from ode-0.12/include/ode/ode.h:40:0,
+                 from vestibularSensor.h:4,
+                 from vestibularSensor.cpp:5:
+ode-0.12/include/ode/misc.h:59:20: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+      FILE *f=stdout);
+                    ^
+g++ -std=c++11 -DHAVE_CONFIG_H -I. -Iode-0.12/ode/src -Iode-0.12/include -DdTRIMESH_ENABLED -DdDOUBLE  -g -O2 -MT -MP -MMD -c -o joint.o joint.cpp
+g++ -std=c++11 -DHAVE_CONFIG_H -I. -Iode-0.12/ode/src -Iode-0.12/include -DdTRIMESH_ENABLED -DdDOUBLE  -g -O2 -MT -MP -MMD -c -o isSeenSensor.o isSeenSensor.cpp
+In file included from ode-0.12/include/ode/ode.h:40:0,
+                 from object.h:4,
+                 from joint.h:4,
+                 from joint.cpp:6:
+ode-0.12/include/ode/misc.h:59:20: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+      FILE *f=stdout);
+                    ^
+In file included from ode-0.12/include/ode/ode.h:40:0,
+                 from isSeenSensor.h:4,
+                 from isSeenSensor.cpp:5:
+ode-0.12/include/ode/misc.h:59:20: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+      FILE *f=stdout);
+                    ^
+g++ -std=c++11 -DHAVE_CONFIG_H -I. -Iode-0.12/ode/src -Iode-0.12/include -DdTRIMESH_ENABLED -DdDOUBLE  -g -O2 -MT -MP -MMD -c -o object.o object.cpp
+In file included from ode-0.12/include/ode/ode.h:40:0,
+                 from object.h:4,
+                 from object.cpp:5:
+ode-0.12/include/ode/misc.h:59:20: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+      FILE *f=stdout);
+                    ^
+/bin/bash ode-0.12/libtool --tag=CXX --mode=link g++ -g -O2 -o simulator simulator.o raySensor.o neuron.o environment.o synapse.o proprioceptiveSensor.o lightSensor.o positionSensor.o touchSensor.o vestibularSensor.o neuralNetwork.o joint.o isSeenSensor.o object.o ode-0.12/drawstuff/src/libdrawstuff.la ode-0.12/ode/src/libode.la -framework OpenGL -framework GLUT -lm -lpthread "-lGL -lGLU -lglut"
+libtool: link: g++ -g -O2 -o simulator simulator.o raySensor.o neuron.o environment.o synapse.o proprioceptiveSensor.o lightSensor.o positionSensor.o touchSensor.o vestibularSensor.o neuralNetwork.o joint.o isSeenSensor.o object.o  ode-0.12/drawstuff/src/.libs/libdrawstuff.a -lX11 ode-0.12/ode/src/.libs/libode.a -lm -lpthread -lGL -lGLU -lglut
