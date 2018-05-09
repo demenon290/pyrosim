@@ -342,7 +342,7 @@ class ENVIRONMENT_3:
 		self.slope = sim.send_box(x=self.slopeX, y=self.slopeY, z=self.slopeZ, 
 								  length=self.slopeL, width=self.slopeW, height=self.slopeH,
 								  r1=self.slopeR1, r2=self.slopeR2, r3=self.slopeR3,
-								  r=1.0, g=1.0, b=0.0) 
+								  r=0.0, g=1.0, b=0.0) 
 		# fix slope in place xyz space
 		sim.send_hinge_joint(first_body_id=self.slope, second_body_id=pyrosim.Simulator.WORLD,
 								x=self.slopeX, y=self.slopeY, z=self.slopeZ,

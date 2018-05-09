@@ -57,23 +57,25 @@ if (c.loadMode):
 	file_1.close()
 	file_2.close()
 	file_3.close()
-
-# evaulate parents in respective environments types
-parents_1.Evaluate(envs_1, True, pp = False)
-parents_2.Evaluate(envs_2, True, pp = False)
-parents_3.Evaluate(envs_3, True, pp = False)
-
-# print results for each parent population
-print("\nfitness of parents 1 in envs 1:"),
-parents_1.Print()
-print("\nfitness of parents 2 in envs 2:"),
-parents_2.Print()
-print("\nfitness of parents 3 in envs 3:"),
-parents_3.Print()
-print("\n")
-
-# skip evolution and saving in movie mode
+	
+# skip parent evaluation, child evolution, and saving in movie mode
 if (not c.movieMode):
+
+	#---EVALUATE PARENTS---#
+
+	# evaulate parents in respective environments types
+	parents_1.Evaluate(envs_1, True, pp = False)
+	parents_2.Evaluate(envs_2, True, pp = False)
+	parents_3.Evaluate(envs_3, True, pp = False)
+
+	# print results for each parent population
+	print("\nfitness of parents 1 in envs 1:"),
+	parents_1.Print()
+	print("\nfitness of parents 2 in envs 2:"),
+	parents_2.Print()
+	print("\nfitness of parents 3 in envs 3:"),
+	parents_3.Print()
+	print("\n")
 
 	###################
 	# EVOLVE CHILDREN #
@@ -146,15 +148,14 @@ if (not c.movieMode):
 
 #---SHOW BEST ROBOT IN EACH ENVIRONMENT---#
 for e in range(c.numEnvs):
-	parents_1.p[0].Start_Evaluation(envs_1.envs[e], False)
-	parents_1.p[0].Compute_Fitness()
+#	parents_1.p[0].Start_Evaluation(envs_1.envs[e], False, pp=True)
+#	parents_1.p[0].Compute_Fitness()
 	#--------------------#
-	parents_2.p[0].Start_Evaluation(envs_2.envs[e], False)
-	parents_2.p[0].Compute_Fitness()
+#	parents_2.p[0].Start_Evaluation(envs_2.envs[e], False, pp=True)
+#	parents_2.p[0].Compute_Fitness()
 	#--------------------#
-	parents_3.p[0].Start_Evaluation(envs_3.envs[e], False)
+	parents_3.p[0].Start_Evaluation(envs_3.envs[e], False, pp=True)
 	parents_3.p[0].Compute_Fitness()
-
 
 ############
 # PLOTTING #
@@ -175,7 +176,7 @@ fitnessData_3 = np.asarray(parents_3.fitnessList)
 # plot sensorData in panel
 plt.plot(fitnessData_1, "b--",	# control
 		 fitnessData_2, "r--",	# uphill
-		 fitnessData_3, "y--")	# 1 hill
+		 fitnessData_3, "g--")	# 1 hill
 plt.title('Fitness vs. Generation')
 plt.ylabel('fitness')
 plt.grid(True)
