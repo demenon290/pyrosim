@@ -262,13 +262,13 @@ class ENVIRONMENT_3:
 			self.Place_Light_Source_To_The_Front()
 			self.Place_Slope_Front()
 		elif(self.ID == 1):
-			self.Place_Light_Source_To_The_Back()
+			self.Place_Light_Source_To_The_Front()
 			self.Place_Slope_Front()
 		elif(self.ID == 2):
-			self.Place_Light_Source_To_The_Right()
+			self.Place_Light_Source_To_The_Front()
 			self.Place_Slope_Front()
 		elif(self.ID == 3):
-			self.Place_Light_Source_To_The_Left()
+			self.Place_Light_Source_To_The_Front()
 			self.Place_Slope_Front()
 		else:
 			self.Place_Light_Source_To_The_Front()
@@ -342,7 +342,7 @@ class ENVIRONMENT_3:
 		self.slope = sim.send_box(x=self.slopeX, y=self.slopeY, z=self.slopeZ, 
 								  length=self.slopeL, width=self.slopeW, height=self.slopeH,
 								  r1=self.slopeR1, r2=self.slopeR2, r3=self.slopeR3,
-								  r=0.2, g=0.6, b=0.3) 
+								  r=1.0, g=1.0, b=0.0) 
 		# fix slope in place xyz space
 		sim.send_hinge_joint(first_body_id=self.slope, second_body_id=pyrosim.Simulator.WORLD,
 								x=self.slopeX, y=self.slopeY, z=self.slopeZ,

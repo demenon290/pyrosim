@@ -39,9 +39,12 @@ class ROBOT:
 	
 	def send_objects(self, sim):
 		
-		#---OBJECTS---#		
+		#---OBJECTS---#	
+		
+		#---BASE---#
 		# gray base
 		self.O0 = sim.send_box(x=0, y=0, z=c.Z, length=c.L, width=c.L, height=c.R*2, r=0.5, g=0.5, b=0.5)		
+		#---THIGHS---#
 		# red leg y>0; r2>0
 		self.O1 = sim.send_cylinder(x=0.0, y=c.L, z=c.Z,	 
 								   length=c.L, radius=c.R, 	
@@ -62,7 +65,7 @@ class ROBOT:
 								   length=c.L, radius=c.R, 
 								   r1=-1, r2=0, r3=0,
 								   r=1, g=0, b=1)
-		
+		#---SHINS---#
 		# red leg y>0; r3<0
 		self.O5 = sim.send_cylinder(x=0.0, y=(c.L+c.L/2), z=c.Z-(c.L/2), 
 								   length=c.L, radius=c.R, 
@@ -86,12 +89,14 @@ class ROBOT:
 		
 		#---OBJECTS DICTIONARY---#		
 		self.O = {}
-		
+		# base
 		self.O[0] = self.O0
+		# thighs
 		self.O[1] = self.O1
 		self.O[2] = self.O2
 		self.O[3] = self.O3
 		self.O[4] = self.O4
+		# shins
 		self.O[5] = self.O5
 		self.O[6] = self.O6
 		self.O[7] = self.O7
@@ -162,11 +167,6 @@ class ROBOT:
 		#---LIGHT SENSORS---#
 		self.L4 = sim.send_light_sensor(body_id = self.O0)	
 		
-		#---POSITION SENSORS---#
-		# tracks robots position in the x,y,z coordinate plane
-		# attach position sensor P4 to gray base O0
-		#self.P5 = sim.send_position_sensor(body_id = self.O0)
-		
 		#---PROPRIOCEPTIVE SENSORS---#
 		self.P0 = sim.send_proprioceptive_sensor(joint_id = self.J0)
 		self.P1 = sim.send_proprioceptive_sensor(joint_id = self.J1)
@@ -178,21 +178,34 @@ class ROBOT:
 		self.P6 = sim.send_proprioceptive_sensor(joint_id = self.J6)
 		self.P7 = sim.send_proprioceptive_sensor(joint_id = self.J7)
 		
+		#---POSITION SENSOR---#
+		# tracks robots position in the x,y,z coordinate plane
+		# attach position sensor P4 to gray base O0
+#		self.XYZ = sim.send_position_sensor(body_id = self.O0)
+		
+		#---RAY SENSOR---#
+		# causes buffer overflow and terminates simulator :/
+#		R0 = sim.send_ray_sensor(body_id = self.O0,
+#									  x = c.Z, y = c.Z, z = c.Z,
+#									  r1 = 0, r2 = 0, r3 = -1)
 		
 		#---SENSOR DICTIONARY---#
 		
 		self.S = {}
 		
+		# touch sensors
 		self.S[0] = self.T0
 		self.S[1] = self.T1
 		self.S[2] = self.T2
 		self.S[3] = self.T3
+		# light sensor
 		self.S[4] = self.L4
-		
+		# proprioceptive sensors
 		self.S[5] = self.P0
 		self.S[6] = self.P1
 		self.S[7] = self.P2
 		self.S[8] = self.P3
+		#-----------------#
 		self.S[9] = self.P4
 		self.S[10] = self.P5
 		self.S[11] = self.P6

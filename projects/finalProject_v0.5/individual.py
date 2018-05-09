@@ -8,6 +8,7 @@ import random
 import math
 import pyrosim
 from robot import ROBOT
+from minimalRobot import MINROBOT
 import constants as c
 import numpy
 import matplotlib.pyplot as plt

@@ -11,11 +11,11 @@ R = L/5
 Z = L*13
 
 # simulator evaluation time
-evalTime = 2000
+evalTime = 3000
 discreteTime = 0.01
 
 # population
-popSize = 8
+popSize = 5
 # environment
 numEnvs = 4
 
@@ -24,7 +24,10 @@ newMode = False
 loadMode = True
 
 # time based evaluation mode
-seconds = 0		
+seconds = 30		
 minutes = 0	
-hours = 2		
+hours = 0		
 runTime = (hours*(60*60))+(minutes*60)+seconds
+
+# movie mode (turn on to just watch the best parents)
+movieMode = True
