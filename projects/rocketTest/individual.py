@@ -6,9 +6,10 @@
 
 import random
 
-import constants as c
 import numpy
 import pyrosim
+
+import constants as c
 from rocket import ROCKET
 
 
@@ -55,10 +56,12 @@ class INDIVIDUAL:
         self.sim.wait_to_finish()
 
         # ---DATA---#
+        ## TODO     change fitenss function to add score if all touch sensors are on
+        ## TODO     and if position sensor has gone high enough
         # set fitness to proximity to light sensor
         self.fitness += self.sim.get_sensor_data(sensor_id=self.robot.lightSensor)[-1]
         ## TEST
-        print self.fitness
+        print 'fitness = ' + self.fitness
 
         # ---DELETE SIM---#
         del self.sim
