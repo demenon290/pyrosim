@@ -74,10 +74,10 @@ class ROCKET:
         # position sensor
         self.posSensor = sim.send_position_sensor(body_id=self.main_body)
         # touch sensors
-        self.T0 = sim.send_touch_sensor(body_id=self.thrusters[0])
-        self.T1 = sim.send_touch_sensor(body_id=self.thrusters[1])
-        self.T2 = sim.send_touch_sensor(body_id=self.thrusters[2])
-        self.T3 = sim.send_touch_sensor(body_id=self.thrusters[3])
+        self.T0 = sim.send_touch_sensor(body_id=self.side_cyls[0])
+        self.T1 = sim.send_touch_sensor(body_id=self.side_cyls[1])
+        self.T2 = sim.send_touch_sensor(body_id=self.side_cyls[2])
+        self.T3 = sim.send_touch_sensor(body_id=self.side_cyls[3])
 
         # create sensor dictionary
         self.S = {}
